@@ -28,6 +28,10 @@ function App() {
     }
   }
 
+  function resetearFormulario() {
+    setPlatilloEditar(null);
+  }
+
   useEffect(() => {
     cargarPlatillos();
   }, []);
@@ -40,12 +44,13 @@ function App() {
       } else {
         await agregarPlatillo(platillo);
         alert("Platillo agregado correctamente.");
+        resetearFormulario();
       }
 
       setPlatilloEditar(null);
       cargarPlatillos();
     } catch (error) {
-      alert("Ocurrió un error.");
+      alert("Ocurrió un error al guardar el platillo.");
     }
   }
 

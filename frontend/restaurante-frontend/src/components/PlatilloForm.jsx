@@ -20,6 +20,15 @@ function PlatilloForm({ onGuardar, platilloEditar }) {
         }
     }, [platilloEditar]);
 
+    function resetearFormulario() {
+        setNombre("");
+        setDescripcion("");
+        setCategoria("");
+        setPrecio("");
+        setImagen("");
+        setDisponible(true);
+    }
+
     function enviarFormulario(e) {
         e.preventDefault();
 
@@ -41,7 +50,10 @@ function PlatilloForm({ onGuardar, platilloEditar }) {
             setImagen("");
             setDisponible(true);
         }
+
+        resetearFormulario();
     }
+
 
     return (
         <form className="platillo-form" onSubmit={enviarFormulario}>
@@ -95,7 +107,7 @@ function PlatilloForm({ onGuardar, platilloEditar }) {
             </label>
 
             <button type="submit">
-                {platilloEditar ? "Actualizar" : "Agregar"}
+                {platilloEditar ? "Actualizar Platillo" : "Agregar Platillo"}
             </button>
 
         </form>
