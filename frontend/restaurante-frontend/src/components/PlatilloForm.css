@@ -1,0 +1,43 @@
+.platillo-form{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    margin-bottom:30px;
+
+    display:grid;
+    gap:15px;
+}
+
+.platillo-form input,
+.platillo-form textarea{
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:15px;
+}
+
+.platillo-form textarea{
+    resize:none;
+    height:90px;
+}
+
+.platillo-form button{
+    background:#ff5722;
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.platillo-form button:hover{
+    background:#e64a19;
+}
+
+.platillo-form label{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
